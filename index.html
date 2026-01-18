@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FastBite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body>
+<header class="navbar">
+  <div class="burger-icon" id="burgerBar" aria-label="Toggle navigation" role="button" tabindex="0">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <div class="logo" id="logo">Fast<span>Bite</span></div>
+
+  <ul class="nav-menu" id="navMenu" aria-label="Primary navigation">
+    
+    <li><a href="#categories">Menu</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">Categories</a>
+      <ul class="dropdown-menu">
+        <li data-filter="burger"><span class="dot burger"></span> Burgers</li>
+        <li data-filter="pizza"><span class="dot pizza"></span> Pizza</li>
+        <li data-filter="drinks"><span class="dot drinks"></span> Drinks</li>
+        <li data-filter="desserts"><span class="dot desserts"></span> Desserts</li>
+      </ul>
+    </li>
+    <li><a href="#testimonials">Customers</a></li>
+    <li><a href="#quality">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <div class="mobile-search" id="searchBar">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </div>
+
+  <div class="nav-actions" id="navActions">
+    <a href="#" class="search-icon" aria-label="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </a>
+    <a href="#Login">Sign in</a>
+    <button class="btn-nav">Order Now</button>
+  </div>
+</header>
+
+<div id="cookies-popup" class="cookies-popup hidden">
+  <div class="cookies-box">
+    <p>We use cookies to improve your ordering experience </p>
+    <button id="acceptCookies">Accept</button>
+  </div>
+</div>
+
+<section class="main">
+  <div class="main-text">
+    <h1>
+      Delicious <span class="text-orange">Fast Food</span><br>
+      Delivered <span class="purple">To You</span>
+    </h1>
+    <p>
+      FastBite brings your favorite meals right to your doorstep, hot and fresh.
+    </p>
+    <div class="buttons">
+      <button class="btn-purple">Order Now</button>
+      <a href="#categories" class="link">See Menu</a>
+    </div>
+  </div>
+
+  <div class="main-image">
+    <img src="./photo/fast food illustration.png" alt="Fast Food Illustration">
+  </div>
+</section>
+
+<!-- ==========================
+     POPULAR MENU STATS (EXPERIENCE REPLACEMENT)
+========================== -->
+<section class="experience">
+  <div class="experience-wrapper">
+
+    <!-- LEFT SIDE -->
+    <div class="experience-left">
+      <h2>Why Choose Us?</h2>
+      <p>We deliver the tastiest fast food with fresh ingredients, quick service, and happy customers. Check out our stats and see why we're the best!</p>
+      <ul class="experience-list">
+        <li>50+ Signature Burgers</li>
+        <li>30+ Pizza Varieties</li>
+        <li>10K+ Satisfied Customers</li>
+        <li>Fast 30-min Delivery</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="experience-right">
+      <div class="exp-card">
+        <h3>50+</h3>
+        <span>Burgers</span>
+      </div>
+      <div class="exp-card">
+        <h3>30+</h3>
+        <span>Pizzas</span>
+      </div>
+      <div class="exp-card">
+        <h3>10K+</h3>
+        <span>Happy Customers</span>
+      </div>
+      <div class="exp-card">
+        <h3>30 min</h3>
+        <span>Fast Delivery</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="categories" id="categories">
+  <h2>Popular Items</h2>
+
+  <ul class="category-tabs">
+    <li class="active" data-filter="burger"><i class="fa-solid fa-hamburger"></i> Burgers</li>
+    <li data-filter="pizza"><i class="fa-solid fa-pizza-slice"></i> Pizza</li>
+    <li data-filter="drinks"><i class="fa-solid fa-mug-hot"></i> Drinks</li>
+    <li data-filter="desserts"><i class="fa-solid fa-ice-cream"></i> Desserts</li>
+  </ul>
+
+  <div class="courses">
+    <!-- BURGERS -->
+    <div class="course-card burger">
+      <img src="./photo/cheeseburger.png" alt="Cheeseburger">
+      <div class="card-header">
+        <span class="tag burger">Burger</span>
+        <span class="price">$5</span>
+      </div>
+      <h3>Classic Cheeseburger</h3>
+    </div>
+    <div class="course-card burger">
+      <img src="./photo/double burger.png" alt="Double Burger">
+      <div class="card-header">
+        <span class="tag burger">Burger</span>
+        <span class="price">$6</span>
+      </div>
+      <h3>Double Burger</h3>
+    </div>
+    <div class="course-card burger">
+      <img src="./photo/veggie burger.png" alt="Veggie Burger">
+      <div class="card-header">
+        <span class="tag burger">Burger</span>
+        <span class="price">$5.5</span>
+      </div>
+      <h3>Veggie Burger</h3>
+    </div>
+
+    <!-- PIZZA -->
+    <div class="course-card pizza">
+      <img src="./photo/peperoni pizza.png" alt="Pepperoni Pizza">
+      <div class="card-header">
+        <span class="tag pizza">Pizza</span>
+        <span class="price">$12</span>
+      </div>
+      <h3>Pepperoni Pizza</h3>
+    </div>
+    <div class="course-card pizza">
+      <img src="./photo/margherita pizza.png" alt="Margherita Pizza">
+      <div class="card-header">
+        <span class="tag pizza">Pizza</span>
+        <span class="price">$11</span>
+      </div>
+      <h3>Margherita Pizza</h3>
+    </div>
+    <div class="course-card pizza">
+      <img src="./photo/BBQ chicken pizza.png" alt="BBQ Chicken Pizza">
+      <div class="card-header">
+        <span class="tag pizza">Pizza</span>
+        <span class="price">$13</span>
+      </div>
+      <h3>BBQ Chicken Pizza</h3>
+    </div>
+
+    <!-- DRINKS -->
+    <div class="course-card drinks">
+      <img src="./photo/cola.png" alt="Cola">
+      <div class="card-header">
+        <span class="tag drinks">Drink</span>
+        <span class="price">$2</span>
+      </div>
+      <h3>Cola</h3>
+    </div>
+    <div class="course-card drinks">
+      <img src="./photo/orange juice.png" alt="Orange Juice">
+      <div class="card-header">
+        <span class="tag drinks">Drink</span>
+        <span class="price">$3</span>
+      </div>
+      <h3>Orange Juice</h3>
+    </div>
+    <div class="course-card drinks">
+      <img src="./photo/milkshake.png" alt="Milkshake">
+      <div class="card-header">
+        <span class="tag drinks">Drink</span>
+        <span class="price">$4</span>
+      </div>
+      <h3>Milkshake</h3>
+    </div>
+
+    <!-- DESSERTS -->
+    <div class="course-card desserts">
+      <img src="./photo/ice cream.png" alt="Ice Cream">
+      <div class="card-header">
+        <span class="tag desserts">Dessert</span>
+        <span class="price">$3</span>
+      </div>
+      <h3>Vanilla Ice Cream</h3>
+    </div>
+    <div class="course-card desserts">
+      <img src="./photo/chocolate cake.png" alt="Chocolate Cake">
+      <div class="card-header">
+        <span class="tag desserts">Dessert</span>
+        <span class="price">$4</span>
+      </div>
+      <h3>Chocolate Cake</h3>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <h2>What Our Customers Say</h2>
+    <p>Real reviews from people who ordered at FastBite</p>
+  </div>
+
+  <div class="testimonials-cards" id="testimonialsContainer">
+
+  </div>
+</section>
+
+
+
+<section class="quality" id="quality">
+  <div class="quality-header">
+    <h2>Why Our Fast Food Is Better</h2>
+    <p>Fresh ingredients, fast service and unforgettable taste</p>
+  </div>
+
+  <div class="quality-cards">
+
+    <div class="quality-card">
+      <div class="quality-icon">🍔</div>
+      <h3>Fresh Ingredients</h3>
+      <p>We use only fresh, high-quality ingredients in every meal.</p>
+    </div>
+
+    <div class="quality-card">
+      <div class="quality-icon">⚡</div>
+      <h3>Super Fast Service</h3>
+      <p>Your order is prepared and delivered in record time.</p>
+    </div>
+
+    <div class="quality-card">
+      <div class="quality-icon">🔥</div>
+      <h3>Perfect Taste</h3>
+      <p>Juicy burgers, crispy fries and bold flavors you’ll love.</p>
+    </div>
+
+    <div class="quality-card">
+      <div class="quality-icon">🛵</div>
+      <h3>Quick Delivery</h3>
+      <p>Hot and fresh food delivered straight to your door.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="cta" id="contact">
+  <h2>Stay Updated!</h2>
+  <p>Subscribe to get our latest offers and discounts directly to your inbox.</p>
+
+  <form class="cta-form" id="contactForm" novalidate>
+    <input type="email" id="contactEmail" placeholder="Enter your email" required />
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- ==========================
+     LOGIN SECTION (UPDATED)
+========================== -->
+<section class="login">
+  <h2>Sign In to Order</h2>
+  <p>Access your account to place your favorite orders quickly!</p>
+
+  <!-- Email Field -->
+  <div class="form-field">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    <div class="error" id="emailError"></div>
+  </div>
+
+  <!-- Password Field -->
+  <div class="form-field password-wrap">
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      <div class="error" id="passwordError"></div>
+    </div>
+    <button type="button" id="togglePassword">Show</button>
+  </div>
+
+  <!-- Remember Me -->
+  <div class="form-field">
+    <label>
+      <input type="checkbox" name="remember"> Remember me
+    </label>
+  </div>
+
+  <!-- Submit Button -->
+  <button class="btn-primary" type="submit">Sign In</button>
+
+  <!-- Extra Links -->
+  <p style="margin-top:12px; font-size:14px; text-align:center;">
+    Don't have an account? <a href="#signup" style="color:#ff7a18;">Sign Up</a>
+  </p>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-top">
+    <div class="footer-logo">Fast<span>Bite</span></div>
+
+    <ul class="footer-links">
+       <li><a href="#categories">Menu</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropdown-toggle">Categories</a>
+      <ul class="dropdown-menu">
+        <li data-filter="burger"><span class="dot burger"></span> Burgers</li>
+        <li data-filter="pizza"><span class="dot pizza"></span> Pizza</li>
+        <li data-filter="drinks"><span class="dot drinks"></span> Drinks</li>
+        <li data-filter="desserts"><span class="dot desserts"></span> Desserts</li>
+      </ul>
+    </li>
+    <li><a href="#testimonials">Customers</a></li>
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+    <div class="footer-socials">
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      <a href="#"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 FastBite - all rights reserved
+  </div>
+</footer>
+</body>
+</html>

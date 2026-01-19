@@ -1,13 +1,11 @@
+
 * {
   font-family: 'Poppins', sans-serif;
 }
-
 body {
   background: #ffedc9;
   color: #111;
 }
-
-/* Header */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -70,7 +68,6 @@ body {
   justify-content: center;
 }
 
-/* Hero */
 .main {
   display: flex;
   justify-content: space-around;
@@ -109,7 +106,6 @@ body {
   object-fit: cover;
 }
 
-/* Categories */
 .categories {
   padding: 80px;
   text-align: center;
@@ -171,18 +167,6 @@ body {
   align-items: center;
   margin-top: 12px;
 }
-.tag {
-  background: #ffe9dc;
-  color: #ff7a18;
-  padding: 6px 14px;
-  border-radius: 14px;
-  font-size: 13px;
-  display: inline-block;
-}
-.tag.developer {
-  background: #ffe2e2;
-  color: #ff4d4d;
-}
 .price {
   color: #7a4dd8;
   font-weight: 600;
@@ -204,7 +188,7 @@ body {
   align-items: center;
   gap: 6px;
 }
-/* .course-card.featured hr { margin-bottom: 20px; } */
+
 .course-card hr {
   border: none;
   height: 1px;
@@ -285,7 +269,6 @@ body {
   font-size: 1rem;
 }
 
-/* CTA */
 .cta {
   max-width: 1100px;
   margin: 100px auto 0;
@@ -328,9 +311,6 @@ body {
   font-weight: 500;
 }
 
-/* ==========================
-   LOGIN SECTION (IMPROVED)
-========================== */
 .login {
   max-width: 400px;
   margin: 60px auto;
@@ -438,14 +418,11 @@ body {
   text-decoration: underline;
 }
 
-/* Hover effect on the whole login card */
 .login:hover {
   transform: translateY(-5px);
   box-shadow: 0 20px 50px rgba(255,122,24,0.25);
 }
 
-
-/* Footer */
 .footer {
   background: #fff6e6;
   margin-top: 80px;
@@ -492,11 +469,9 @@ body {
   color: #666;
 }
 
-/* Interactions */
 .nav-menu a:hover { color: #ff7a18; transition: color 0.3s ease; }
 .btn-nav:hover { background: #ff9500; transition: background 0.3s ease; }
 .btn-purple:hover { background: #8e5de8; transition: background 0.3s ease; }
-.btn-orange:hover { background: #ff9500; transition: background 0.3s ease; }
 .category-tabs li:hover {
   background: #ff7a18; color: #fff; transition: all 0.3s ease;
 }
@@ -510,11 +485,7 @@ body {
 .course-card .enroll:hover {
   background: #ff9500; transform: translateY(-2px); transition: all 0.3s ease;
 }
-.price-card button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
-}
+
 .footer-socials a:hover {
   transform: scale(1.1); background: #ff7a18; transition: all 0.3s ease;
 }
@@ -526,17 +497,14 @@ body {
 }
 .link:hover { text-decoration: underline; transition: all 0.3s ease; }
 
-/* Utility */
 .hidden { display: none !important; }
 
-/* Mobile Navigation Slide-in */
 @media (max-width: 768px) {
   .burger-icon { display: block; }
   .mobile-search { display: block; }
   .nav-actions { display: none; }
   .main-image, .about-image { display: none; }
 
-  /* Slide-in menu from right */
 .nav-menu {
   position: fixed;
   top: 0;
@@ -563,7 +531,6 @@ body {
   transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
 }
 
-/* Hover effect */
 .nav-menu a:hover {
   background: linear-gradient(90deg, #ff7a18, #ffb347);
   color: #fff;
@@ -571,19 +538,11 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-/* Active state (menu open) */
 .nav-menu.activeNav {
   right: 0;
 }
-
   
 }
-
-/* ==========================
-   RESPONSIVE FIXES
-========================== */
-
-/* Desktop small */
 @media (max-width: 1024px) {
   .main { flex-direction: column; padding: 30px; }
   .main-text { max-width: 100%; text-align: center; }
@@ -594,7 +553,6 @@ body {
   .quality-cards { grid-template-columns: repeat(2, 1fr); }
 }
 
-/* Tablets */
 @media (max-width: 768px) {
   .main-text h1 { font-size: 48px; }
   .main-text p { font-size: 16px; }
@@ -607,11 +565,9 @@ body {
   .cta { padding: 50px 20px; }
 }
 
-/* Mobile small phones */
 @media (max-width: 480px) {
   .main-text h1 { font-size: 36px; }
   .main-text p { font-size: 14px; }
-  .buttons button, .buttons .link { width: 100%; text-align: center; }
   .course-card, .price-card { width: 95%; padding: 15px; }
   .experience-right { grid-template-columns: 1fr; gap: 20px; }
   .quality-cards { grid-template-columns: 1fr; gap: 20px; }
@@ -621,7 +577,6 @@ body {
   .testimonials-cards { flex-direction: column; gap: 20px; }
 }
 
-/* Very small phones */
 @media (max-width: 320px) {
   .main-text h1 { font-size: 28px; }
   .main-text p { font-size: 13px; }
@@ -633,8 +588,6 @@ body {
   .experience-left p { font-size: 14px; }
 }
 
-
-/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -672,23 +625,10 @@ body {
   background: #f5f5f5;
 }
 
-/* colored dots */
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.dot.web { background: #ff4d4d; }
-.dot.dev { background: #7a4dd8; }
-.dot.ps  { background: #ff7a18; }
-.dot.py  { background: #3dbf5f; }
-
-/* Active */
 .dropdown.active .dropdown-menu {
   display: flex;
 }
 
-/* Overlay */
 .cookies-popup {
   position: fixed;
   top: 0; left: 0;
@@ -704,7 +644,6 @@ body {
   display: none;
 }
 
-/* Popup box */
 .cookies-box {
   background: #111;
   color: #fff;
@@ -724,9 +663,7 @@ body {
   color: #fff;
   cursor: pointer;
 }
-/* ==========================
-   EXPERIENCE SECTION
-========================== */
+
 .experience {
   padding: 80px 8%;
   background: linear-gradient(135deg, #ffedc9, #ffaa34c0);
@@ -740,7 +677,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* LEFT SIDE */
 .experience-left {
   flex: 1;
   min-width: 280px;
@@ -765,7 +701,6 @@ body {
   color: #374151;
 }
 
-/* RIGHT SIDE */
 .experience-right {
   flex: 1;
   display: grid;
@@ -799,7 +734,6 @@ body {
   box-shadow: 0 25px 60px rgba(0,0,0,0.12);
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .experience-wrapper {
     flex-direction: column;
@@ -809,9 +743,7 @@ body {
     grid-template-columns: 1fr 1fr;
   }
 }
-/* ==========================
-   FASTFOOD QUALITY SECTION
-========================== */
+
 .quality {
   padding: 90px 8%;
   background: linear-gradient(135deg, #fff5ec, #ffe3cc);
@@ -833,7 +765,6 @@ body {
   font-size: 16px;
 }
 
-/* CARDS */
 .quality-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -871,7 +802,6 @@ body {
   line-height: 1.6;
 }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
   .quality-cards {
     grid-template-columns: repeat(2, 1fr);
@@ -884,9 +814,6 @@ body {
   }
 }
 
-/* ==========================
-   TESTIMONIALS
-========================= */
 .testimonials {
   padding: 80px 20px;
   background: #fff9f1;
@@ -942,26 +869,23 @@ body {
   font-size: 1rem;
   color: #f4c150;
 }
-/* Mobile small phones */
+
 @media (max-width: 320px) {
   .navbar { font-size: 14px; }
   .course-card { max-width: 100%; }
   .testimonials-cards { flex-direction: column; gap: 20px; }
 }
 
-/* Mobile phones */
 @media (max-width: 480px) {
   .navbar { font-size: 15px; }
   .testimonials-cards { gap: 24px; }
 }
 
-/* Tablets */
 @media (max-width: 768px) {
   .navbar { font-size: 16px; }
   .course-card { max-width: 45%; }
 }
 
-/* Desktop small */
 @media (max-width: 1024px) {
   .course-card { max-width: 30%; }
 }

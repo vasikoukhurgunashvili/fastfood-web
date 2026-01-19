@@ -1,14 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ==========================
-     STICKY HEADER
-  ========================== */
   const header = document.querySelector(".navbar");
   header.classList.add("sticky");
 
-  /* ==========================
-     BURGER MENU + OVERLAY
-  ========================== */
   const navigation = document.getElementById("navMenu");
   const burgerBar = document.getElementById("burgerBar");
 
@@ -31,9 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.classList.add("hidden");
   }
 
-  /* ==========================
-     DROPDOWN MENU
-  ========================== */
   const dropdowns = document.querySelectorAll(".dropdown");
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector(".dropdown-toggle");
@@ -52,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ==========================
-     CATEGORY FILTER (POPULAR ITEMS)
-  ========================== */
   const tabs = document.querySelectorAll(".category-tabs li");
   const cards = document.querySelectorAll(".course-card");
 
@@ -115,9 +103,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ==========================
-     LOGO → TOP / MAIN
-  ========================== */
   const logo = document.getElementById("logo");
   logo?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -130,9 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
     closeMenu();
   });
 
-  /* ==========================
-     LOGIN FORM
-  ========================== */
   const loginSection = document.querySelector(".login");
   const loginForm = loginSection?.querySelector("form") || loginSection;
   const emailInput = document.getElementById("email");
@@ -152,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     let valid = true;
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailInput.value) {
       emailError.textContent = "Email is required";
@@ -164,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
       emailError.textContent = "";
     }
 
-    // Password validation (min 6 chars, at least 1 letter + 1 number)
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
     if (!passwordInput.value) {
       passwordError.textContent = "Password is required";
@@ -184,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Real-time validation
   emailInput?.addEventListener("input", () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     emailError.textContent = emailRegex.test(emailInput.value) ? "" : "Enter a valid email address";
@@ -195,21 +174,15 @@ document.addEventListener("DOMContentLoaded", () => {
     passwordError.textContent = passwordRegex.test(passwordInput.value) ? "" : "Password must be at least 6 chars, with letters & numbers";
   });
 
-  /* ==========================
-     SIGN IN / ORDER NOW BUTTONS → LOGIN
-  ========================== */
   const signInBtns = document.querySelectorAll('a[href="#signin"], a[href="#login"], .btn-nav, .sign-in'); 
   signInBtns.forEach(btn => {
     btn.addEventListener("click", e => {
       e.preventDefault();
-      closeMenu(); // burger menu თუ ღიაა დაიხუროს
+      closeMenu();
       loginSection?.scrollIntoView({ behavior: "smooth" });
     });
   });
 
-  /* ==========================
-     NEWSLETTER FORM
-  ========================== */
   const newsletterForm = document.getElementById("contactForm");
   const newsletterEmail = document.getElementById("contactEmail");
 
@@ -224,9 +197,6 @@ document.addEventListener("DOMContentLoaded", () => {
     newsletterForm.reset();
   });
 
-  /* ==========================
-     COOKIES POPUP
-  ========================== */
   const cookiesPopup = document.querySelector(".cookies-popup");
   const cookiesBtn = document.getElementById("acceptCookies");
 
@@ -239,9 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("cookiesAccepted", "true");
   });
 });
-/* ==========================
-   API — Testimonials (Random User)
-========================= */
+
 const testimonialsContainer = document.getElementById("testimonialsContainer");
 
 fetch("https://randomuser.me/api/?results=4&nat=us")
@@ -254,7 +222,7 @@ fetch("https://randomuser.me/api/?results=4&nat=us")
 
       const fullName = `${user.name.first} ${user.name.last}`;
       const img = user.picture.medium;
-      const comment = getRandomComment(); // helper for pseudo review text
+      const comment = getRandomComment();
       const stars = "⭐⭐⭐⭐⭐";
 
       card.innerHTML = `
@@ -272,7 +240,6 @@ fetch("https://randomuser.me/api/?results=4&nat=us")
     testimonialsContainer.innerHTML = "<p>Unable to load testimonials right now.</p>";
   });
 
-// Optional “random” comment helper
 function getRandomComment() {
   const comments = [
     "FastBite is amazing! The food arrives hot and fresh every time!",

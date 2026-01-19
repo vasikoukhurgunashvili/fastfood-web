@@ -468,6 +468,11 @@ body {
   font-size: 14px;
   color: #666;
 }
+@media (max-width: 768px) {
+  .footer-links {
+    display: none;
+  }
+}
 
 .nav-menu a:hover { color: #ff7a18; transition: color 0.3s ease; }
 .btn-nav:hover { background: #ff9500; transition: background 0.3s ease; }
@@ -889,3 +894,4 @@ body {
 @media (max-width: 1024px) {
   .course-card { max-width: 30%; }
 }
+
